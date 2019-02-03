@@ -1,0 +1,30 @@
+<% include partials/header %>
+	<h1> Please Register here:</h1>
+
+	<form action="/signup" method="POST">
+		<input type="number" 
+		name="UID"
+		placeholder="UID">
+		<input type ="password" 
+		name = "password"
+		placeholder="password">
+		<input type="text" 
+		name="username"
+		placeholder="username">
+		<input type="email" 
+		name="email"
+		placeholder="email">
+		<input type="text" 
+		name="year"
+		placeholder="Your Current Year">
+		<input type="text" name="classes" placeholder="classes">
+		<button>Sign up Yo!</button>
+	</form>
+
+	<h3> Here are all available classes </h3>
+
+	<% courses.forEach(function(course){ %>
+		<li><%= course.CID %></li>
+	<% }); %>
+
+<% include partials/footer %>
